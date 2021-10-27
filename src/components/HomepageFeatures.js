@@ -4,32 +4,32 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Step One',
+    Svg: require('../../static/img/step1.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+      First load up everything...<br></br>
+      <code>k3ai up</code>
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Step Two',
+    Svg: require('../../static/img/step2.svg').default,
     description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+      <> 
+        ...then you want to build infrastructure...  <br></br>
+      <code>k3ai cluster deploy -t k3s -n mycluster</code>
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: 'Step Three',
+    Svg: require('../../static/img/step3.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+      ...finally rock the party with AI <br></br>
+        <code>k3ai plugin deploy -n mlflow -t mycluster</code>
       </>
     ),
   },
@@ -39,7 +39,7 @@ function Feature({Svg, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
+        <Svg className={styles.featureSvg} alt="Online illustrations by Storyset" />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
