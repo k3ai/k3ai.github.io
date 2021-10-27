@@ -1,0 +1,207 @@
+---
+id: k3ai
+title: Command Reference
+---
+
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: '36473D',
+      borderRadius: '2px',
+      color: '#36473D',
+      padding: '0.2rem',
+    }}>
+    {children}
+  </span>
+);
+
+
+<details >
+  <summary>
+    <Highlight><b><h2>K3AI</h2></b>
+    <div>K3ai follow a super simple logic: <b>K3AI [COMMAND] [ACTION] [OPTIONS]</b>.Click on the arrow to discover its options.</div>
+    </Highlight>
+  </summary>
+  <div>    
+    <details >
+      <summary >
+        <h3>up</h3>
+            <div><b>Up</b> is an <b>[COMMAND]</b>. It is used to configure <b>OR</b> update K3ai. Click on the arrow to discover its options.</div>   
+      </summary>
+      <div>
+        <details>
+          <summary>
+            --quiet [-q]
+          </summary>
+          <div>
+            <b>Quiet</b> command is what you use to operate k3ai without our fancy loaders and messages.It's ideal for scripting.
+          </div>
+        </details>
+      </div>
+    </details>
+    <details >
+      <summary>
+        <h2>down</h2>
+            <div><b>Down</b> is an <b>[COMMAND]</b>. It is used to remove completly K3ai from the local computer. Click on the arrow to discover its options.</div>   
+      </summary>
+      <div>
+       <details>
+          <summary>
+            --quiet [-q]
+          </summary>
+          <div>
+            <b>Quiet</b> command is what you use to operate k3ai without our fancy loaders and messages.It's ideal for scripting.
+          </div>
+        </details>
+      </div>
+    </details>
+    <details >
+      <summary>
+        <h2>cluster</h2>
+            <div><b>Cluster</b> is an <b>[COMMAND]</b>. It is used to call the action relative to the infrastructure. Click on the arrow to discover its options.</div>            
+      </summary>
+      <div>
+        <details >
+          <summary>
+            <h3>--deploy [-d]</h3>
+          </summary>
+          <div>
+            <b>Deploy</b> is an <b>[ACTION]</b>. It is what you use to operate k3ai clusters.It allow you to deploy a cluster of a certain type and with a logic name.
+            <div>
+              <details>
+                <summary>
+                  <h4>--type [-t] [TYPE OF CLUSTER]</h4>
+                </summary>
+                <div>
+                  <b>Type</b> is a first level <b>[OPTION]</b>. It is the type of cluster you want to deploy (i.e.: k3s)
+                    <div>
+                      <details>
+                        <summary>
+                          --name [-n] [LOGIC NAME OF CLUSTER]
+                        </summary>
+                        <div>
+                          <b>Name</b> is a second level <b>[OPTION]</b>. It is used to provide cluster  logic name for later operations. Not all cluster type allow to name instances.
+                        </div>
+                      </details>
+                    </div>
+                </div>
+              </details>
+            </div>
+            <details>
+                <summary>
+                  --quiet [-q]
+                </summary>
+                <div>
+                  <b>Quiet</b> command is what you use to operate k3ai without our fancy loaders and messages.It's ideal for scripting.
+                </div>
+            </details>
+          </div>
+        </details>
+      </div>
+      <div>
+        <details>
+          <summary>
+            <h3>--list [-l]</h3>
+          </summary>
+          <div>
+            <b>List</b> is an [ACTION]. It is user to either list the available cluster types <b>OR</b> list the deployed clusters.
+                <div>
+                  <details>
+                    <summary>
+                      --all [-a]
+                    </summary>
+                    <div>
+                      <b>All</b> is a first level <b>[OPTION]</b>. It is used to list all available cluster type deployable through k3ai.
+                    </div>
+                  </details>
+                </div>
+                <div>
+                  <details>
+                    <summary>
+                      --deployed [-d]
+                    </summary>
+                    <div>
+                      <b>Deployed</b> is a first level <b>[OPTION]</b>. It is used to list all deployed cluster through k3ai.
+                    </div>
+                  </details>
+                </div>
+          </div>
+        </details>
+      </div>
+      <div>
+        <details>
+          <summary>
+            remove
+          </summary>
+          <div>
+            <b>Remove</b> is an <b>[ACTION]</b>. It is used to remove a specific cluster, identified by the logical name.
+                <div>
+                  <details>
+                    <summary>
+                      --name [-n]
+                    </summary>
+                    <div>
+                      <b>Name</b> is a first level <b>[OPTION]</b>. It is used to target the cluster that need to be removed, through its logical name.
+                    </div>
+                  </details>
+                </div>
+                <div>
+                  <details>
+                <summary>
+                  --quiet [-q]
+                </summary>
+                <div>
+                  <b>Quiet</b> command is what you use to operate k3ai without our fancy loaders and messages.It's ideal for scripting.
+                </div>
+            </details>
+          </div>
+          </div>
+        </details>
+      </div>
+    </details>
+    <details >
+      <summary>
+        <h2>plugin</h2>
+            <div><b>Plugin</b> is an <b>[COMMAND]</b>. It is used to call the actions relative to the AI tools. Click on the arrow to discover its options.</div>   
+      </summary>
+       <div>
+        <details>
+          <summary>
+            <h3>--deploy [-d]</h3>
+          </summary>
+          <div>
+            <b>Deploy</b> is an <b>[ACTION]</b>. It is what you use to operate k3ai clusters.It allow you to deploy a cluster of a certain type and with a logic name.
+            <div>
+              <details>
+                <summary>
+                  <h4>--name [-n] [NAME OF PLUGIN]</h4>
+                </summary>
+                <div>
+                  <b>Name</b> is a first level <b>[OPTION]</b>. It is the name of the plugin you want to deploy (i.e.: mlflow)
+                    <div>
+                      <details>
+                        <summary>
+                          --target [-t] [LOGIC NAME OF CLUSTER]
+                        </summary>
+                        <div>
+                          <b>Target</b> is a second level <b>[OPTION]</b>. It is used to provide cluster  logic name where to install the plugin.
+                        </div>
+                      </details>
+                    </div>
+                </div>
+              </details>
+            </div>
+            <details>
+                <summary>
+                  --quiet [-q]
+                </summary>
+                <div>
+                  <b>Quiet</b> command is what you use to operate k3ai without our fancy loaders and messages.It's ideal for scripting.
+                </div>
+            </details>
+          </div>
+        </details>
+      </div>
+    </details>
+  </div>
+</details>
