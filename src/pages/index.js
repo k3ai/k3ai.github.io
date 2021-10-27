@@ -14,7 +14,7 @@ function HomepageHeader() {
       <div className="container">
         {/* <h1 className="hero__title">{siteConfig.title}</h1> */}
         <img src={Logo} alt="Logo" width="300px" />
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle" style={{color: '#36473D'}}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
