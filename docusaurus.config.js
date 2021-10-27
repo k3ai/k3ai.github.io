@@ -8,13 +8,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'K3ai',
   tagline: 'K3ai is cool',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://k3ai.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'k3ai', // Usually your GitHub org/user name.
-  projectName: 'k3ai', // Usually your repo name.
+  projectName: 'k3ai.github.io', // Usually your repo name.
 
   presets: [
     [
