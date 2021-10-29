@@ -124,15 +124,39 @@ const config = {
 };
 
 module.exports = {
-  plugins: ['@docusaurus/plugin-google-analytics'],
-  themeConfig: {
-    googleAnalytics: {
-      trackingID: 'UA-211572758-1',
-      
-      // Optional fields.
-      anonymizeIP: true, // Should IPs be anonymized?
+  config: config,
+  plugins: [ 
+    [
+      '@docusaurus/plugin-google-analytics',
+      {
+        googleAnalytics: {
+          trackingID: 'UA-211572758-1',
+
+          // Optional fields.
+          anonymizeIP: true, // Should IPs be anonymized?
+        },
+      },
+    ],
+    [
+      '@docusaurus/plugin-sitemap',
+  {
+      changefreq: 'weekly',
+      priority: 0.5,
+      trailingSlash: false,
     },
-  },
+  ],
+  [
+    '@docusaurus/plugin-google-gtag',
+    {
+      gtag: {
+        // You can also use your "G-" Measurement ID here.
+        trackingID: 'UA-211572758-1',
+        // Optional fields.
+        anonymizeIP: true, // Should IPs be anonymized?
+      },
+    }
+  ]
+]
 };
 
-module.exports = config;
+// module.exports = config;
