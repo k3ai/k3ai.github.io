@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="A lightweight tool to get an AI Infrastructure Stack up in minutes not days. <head />">
+      description="A lightweight tool to get an AI Infrastructure Stack up in minutes not days <head />">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
