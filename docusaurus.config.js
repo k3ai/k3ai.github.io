@@ -35,12 +35,6 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        // Will be passed to @docusaurus/plugin-google-analytics.
-        googleAnalytics: {
-          trackingID: 'UA-211572758-1',
-          // Optional fields.
-          anonymizeIP: true, // Should IPs be anonymized?
-        },
       }),
     ],
 
@@ -49,6 +43,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      googleAnalytics: {
+        trackingID: 'UA-211572758-1',
+        // Optional fields.
+        anonymizeIP: true, // Should IPs be anonymized?
+      },
       navbar: {
         title: 'K3ai',
         logo: {
