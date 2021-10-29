@@ -83,8 +83,8 @@ const config = {
               //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               // },
               {
-                label: 'Slack',
-                href: 'https://join.slack.com/t/k3ai/shared_invite/zt-weuljdyt-Z~pp2w~XENi6o3wtHGc1fQ',
+                label: 'Discord',
+                href: 'https://discord.gg/vzUdjsq5cD',
               },
               {
                 label: 'Twitter',
