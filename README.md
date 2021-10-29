@@ -14,7 +14,7 @@ Once you got your branch follow the below steps.
 ---
 
 **ATTENTION**
-Do not use gh_pages branch. It's used to publish the website. Any PR against it will be ignored.
+Do not use **gh_pages** branch. It's used to publish the website. Any PR against it will be ignored.
 
 ---
 
