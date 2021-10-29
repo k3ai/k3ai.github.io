@@ -5,7 +5,7 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'Step One',
-    Svg: require('../../static/img/step1.svg').default,
+    Svg: require('../../static/img/undraw_load_more_re_482p.svg').default,
     description: (
       <>
       First load up everything...<br></br>
@@ -15,26 +15,37 @@ const FeatureList = [
   },
   {
     title: 'Step Two',
-    Svg: require('../../static/img/step2.svg').default,
+    Svg: require('../../static/img/undraw_checking_boxes_re_9h8m.svg').default,
     description: (
       <> 
-        ...then you want to build infrastructure...  <br></br>
+        ...then you want to build your AI infrastructure...  <br></br>
       <code>k3ai cluster deploy -t k3s -n mycluster</code>
       </>
     ),
   },
   {
     title: 'Step Three',
-    Svg: require('../../static/img/step3.svg').default,
+    Svg: require('../../static/img/undraw_control_panel_re_y3ar.svg').default,
     description: (
       <>
-      ...finally rock the party with AI <br></br>
-        <code>k3ai plugin deploy -n mlflow -t mycluster</code>
+      ...add some AI tool...<br></br>
+      <code>k3ai plugin deploy -n mlflow -t mycluster</code>
       </>
     ),
   },
 ];
-
+const FinalFeature=[
+  {
+    title: 'Step Four',
+    Svg: require('../../static/img/undraw_accept_terms_re_lj38.svg').default,
+    description: (
+      <>
+      ...finally push your code and enjoy!<br></br>
+      <code>k3ai plugin deploy -n mlflow -t mycluster</code>
+      </>
+    ),
+  },
+]
 function Feature({Svg, title, description}) {
   return (
     <div className={clsx('col col--4')}>
@@ -58,6 +69,10 @@ export default function HomepageFeatures() {
             <Feature key={idx} {...props} />
           ))}
         </div>
+
+          {FinalFeature.map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))}
       </div>
     </section>
   );
