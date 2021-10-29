@@ -123,4 +123,16 @@ const config = {
     }),
 };
 
+module.exports = {
+  plugins: ['@docusaurus/plugin-google-analytics'],
+  themeConfig: {
+    googleAnalytics: {
+      trackingID: 'UA-211572758-1',
+      
+      // Optional fields.
+      anonymizeIP: true, // Should IPs be anonymized?
+    },
+  },
+};
+
 module.exports = config;
