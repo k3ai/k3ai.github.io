@@ -10,11 +10,11 @@ Let's discover **K3ai in three simple steps**.
 
 Get started by **download k3ai** from the release page [here](https://github.com/k3ai/releases).
 
-Or **try K3ai companion script** using this command:
+<!-- Or **try K3ai companion script** using this command:
 
 ```bash
 curl -LO https://get.k3ai.in | sh -
-```
+``` -->
 
 ## Load K3ai configuration
 

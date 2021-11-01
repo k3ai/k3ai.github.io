@@ -18,7 +18,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="https://github.com/k3ai/k3ai.github.io/releases">
+            to="https://github.com/k3ai/k3ai/releases">
             Download K3ai
           </Link>
         </div>
