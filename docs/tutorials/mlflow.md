@@ -51,7 +51,19 @@ to learn how to expose it (typically through a port-forward). In v1.0.1 we will 
 
 Now let's move to the last step.
 
-## Step 3 - Run the training and track the result.
+## Step 3 - Run the training and track the result
+
+:::info
+Before we may run the example there is a manual step (yeah we know it's annoying but we are working on it).
+Open your local terminal (where you are running the cluster) and do something like:
+
+```bash
+
+sudo mkdir /mnt/data/minio/mlflow
+
+```
+
+:::
 
 We will run a copy of the Xgboost example from [here](https://github.com/mlflow/mlflow/tree/master/examples/xgboost)
 
