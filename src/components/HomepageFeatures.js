@@ -41,7 +41,7 @@ const FinalFeature=[
     description: (
       <>
       ...finally push your code and enjoy!<br></br>
-      <code>k3ai plugin deploy -n mlflow -t mycluster</code>
+      <code>k3ai plugin run -s https://github.com/k3ai/quickstart -b mlflow -t mycluster</code>
       </>
     ),
   },
