@@ -1,11 +1,11 @@
 ---
-id: kubeflow
-title: Kubeflow Tutorial
+id: rubrix
+title: Rubrix Tutorial
 ---
 
-# Run a complete pipeline with K3ai and Kubeflow
+# Train a model with K3ai and Rubrix
 
-In this simple tutorial we will run one of the public examples of Kubeflow (the flip coin pipeline) using K3ai. We assume the following:
+In this simple tutorial we will run one of the public examples of MLFlow (xgboost) using K3ai. We assume the following:
 
 - The machine to be used is running Linux
 - The machine does not have anything installed if not just the basic Operating System
@@ -26,20 +26,21 @@ k3ai cluster deploy -t k3s -n myk3scluster
 
 :::note
 
-Currently (v1.0.1) we do not support Rancher K3s deployment on WSL2 but you may use K3d instead.
+Currently (v1.0.0) we do not support Rancher K3s deployment on WSL2. In order to use it, please user K3d.
+
 :::
 
 Once the cluster will be deployed we may proceed to the step 2.
 
-## Step 2 - Deploy Kubeflow Pipelines (Argo) on the cluster
+## Step 2 - Deploy MLFlow on the cluster
 
 K3ai allow the user to deploy any plugin on any deployed target cluster in one single command.
 
 ```bash
-k3ai plugin deploy -n kf-pa -t myk3scluster
+k3ai plugin deploy -n mlflow -t myk3scluster
 
 ```
-The deployment will publish the URL where to connect to the UI of KFP.
+The deployment will publish the URL where to connect to the UI of MLFLOW.
 
 :::caution
 
@@ -53,15 +54,15 @@ Now let's move to the last step.
 ## Step 3 - Run the training and track the result
 
 
-We will run a copy of the flip coing pipeline example from [here](https://github.com/kubeflow/pipelines/blob/master/samples/tutorials/DSL%20-%20Control%20structures/DSL%20-%20Control%20structures.py)
+We will run a copy of the Xgboost example from [here](https://github.com/mlflow/mlflow/tree/master/examples/xgboost)
 
 Simply run:
 
 ```bash
-k3ai run -s https://github.com/k3ai/quickstart/kfp -b kfp -e condition.py -t mycluster
+k3ai run -s https://github.com/k3ai/quickstart -b mlflow
 
 ```
 
-wait for the deployment to complete and check the results on the Kubeflow UI. 
+wait for the deployment to complete and check the results on the MLFlow UI. 
 
-Done, you completed the Kubeflow tutorial on how to run a simple training with K3ai and MLFLow. Now take your examples and have fun!
+Done, you completed the MLFLOW tutorial on how to run a simple training with K3ai and MLFLow. Now take your examples and have fun!

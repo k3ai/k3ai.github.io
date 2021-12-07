@@ -26,7 +26,7 @@ k3ai cluster deploy -t k3s -n myk3scluster
 
 :::note
 
-Currently (v1.0.0) we do not support Rancher K3s deployment on WSL2. In order to use it, please run the K3s binary manually.
+Currently (v1.0.1) we do not support Rancher K3s deployment on WSL2. In order to use it, please user K3d.
 
 :::
 
@@ -53,17 +53,6 @@ Now let's move to the last step.
 
 ## Step 3 - Run the training and track the result
 
-:::info
-Before we may run the example there is a manual step (yeah we know it's annoying but we are working on it).
-Open your local terminal (where you are running the cluster) and do something like:
-
-```bash
-
-sudo mkdir /mnt/data/minio/mlflow
-
-```
-
-:::
 
 We will run a copy of the Xgboost example from [here](https://github.com/mlflow/mlflow/tree/master/examples/xgboost)
 

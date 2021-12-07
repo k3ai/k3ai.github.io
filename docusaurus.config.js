@@ -37,11 +37,11 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        versions: {
-          current: {
-            label: `v1.0 🚧`,
-          },
-        },
+        // versions: {
+        //   current: {
+        //     label: `v1.0 🚧`,
+        //   },
+        // },
       }),
     ],
   ],
