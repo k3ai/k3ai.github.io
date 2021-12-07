@@ -17,6 +17,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'k3ai', // Usually your GitHub org/user name.
   projectName: 'k3ai.github.io', // Usually your repo name.
+  deploymentBranch: 'gh_pages',
 
   presets: [
     [
