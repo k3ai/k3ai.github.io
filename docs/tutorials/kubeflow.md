@@ -58,7 +58,7 @@ We will run a copy of the flip coing pipeline example from [here](https://github
 Simply run:
 
 ```bash
-k3ai run -s https://github.com/k3ai/quickstart/kfp -b kfp -e condition.py -t mycluster
+k3ai run -s https://github.com/k3ai/sample/kfp -b kfp -e condition.py -t myk3scluster
 
 ```
 
